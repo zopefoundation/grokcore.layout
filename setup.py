@@ -42,7 +42,6 @@ setup(name='grokcore.layout',
       install_requires=[
           'grokcore.component',
           'grokcore.formlib',
-          'grokcore.message',
           'grokcore.security',
           'grokcore.view >= 2.3',
           'martian',

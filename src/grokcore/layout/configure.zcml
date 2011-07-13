@@ -5,6 +5,5 @@
   <include package="grokcore.layout" file="meta.zcml" />
   <include package="grokcore.view" />
   <include package="grokcore.formlib" />
-  <include package="grokcore.message" />
 
 </configure>

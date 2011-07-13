@@ -2,7 +2,6 @@ import os
 
 import grokcore.component as grok
 import grokcore.formlib
-import grokcore.message
 import grokcore.view
 import zope.component
 
@@ -27,11 +26,6 @@ class UtilityView(object):
         if site is None:
             raise zope.component.ComponentLookupError("No site found.")
         return self.url(site, name)
-
-    def flash(self, message, type='message'):
-        """Sends a message to the session messager.
-        """
-        return grokcore.message.send(message, type)
 
 
 class Layout(grokcore.view.ViewSupport, UtilityView):
@@ -89,13 +83,13 @@ class LayoutAware(UtilityView):
     layout = None
 
     def __call__(self):
+        self.layout = zope.component.getMultiAdapter(
+            (self.request, self.context), ILayout)
         mapply(self.update, (), self.request)
         if self.request.response.getStatus() in (302, 303):
             # A redirect was triggered somewhere in update().  Don't
             # continue rendering the template or doing anything else.
             return
-        self.layout = zope.component.getMultiAdapter(
-            (self.request, self.context), ILayout)
         return self.layout(self)
 
     def default_namespace(self):
