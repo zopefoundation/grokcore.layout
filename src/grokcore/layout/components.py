@@ -12,23 +12,9 @@ import zope.security.interfaces
 from zope.publisher.publish import mapply
 import zope.interface.common.interfaces
 import zope.errorview.browser
-from zope.component.hooks import getSite
 
 
-class UtilityView(object):
-    """A view mixin with useful methods.
-    """
-
-    def application_url(self, name=None):
-        """Return the URL of the nearest site.
-        """
-        site = getSite()
-        if site is None:
-            raise zope.component.ComponentLookupError("No site found.")
-        return self.url(site, name)
-
-
-class Layout(grokcore.view.ViewSupport, UtilityView):
+class Layout(grokcore.view.ViewSupport):
     """A layout object.
     """
     grok.baseclass()
@@ -75,7 +61,7 @@ class Layout(grokcore.view.ViewSupport, UtilityView):
         return self.render()
 
 
-class LayoutAware(UtilityView):
+class LayoutAware(object):
     """A mixin to make views aware of layouts.
     """
     grok.baseclass()
