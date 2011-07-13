@@ -1,9 +1,9 @@
 """
-  >>> from megrok.layout import ILayout
+  >>> from grokcore.layout import ILayout
   >>> from zope.component import getMultiAdapter
   >>> from zope.publisher.browser import TestRequest
   >>> request = TestRequest()
-  >>> from megrok.layout.tests.layout.static_fixture.simple import Dummy 
+  >>> from grokcore.layout.tests.layout.static_fixture.simple import Dummy 
   >>> mongo = Dummy()
   >>> mylayout = getMultiAdapter((request, mongo), ILayout)
   >>> mylayout.static
@@ -11,7 +11,7 @@
 """
 
 import grokcore.component as grok
-from megrok.layout import Layout
+from grokcore.layout import Layout
 from grokcore.view.ftests.staticdir.simple import DummyResource
 
 import zope.component
@@ -22,4 +22,4 @@ from zope.publisher.interfaces.browser import IBrowserRequest
 zope.component.provideAdapter(factory=DummyResource,
     adapts=(IBrowserRequest,),
     provides=zope.interface.Interface,
-    name='megrok.layout.tests.layout.static_fixture')
+    name='grokcore.layout.tests.layout.static_fixture')

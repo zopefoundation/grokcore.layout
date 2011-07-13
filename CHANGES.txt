@@ -7,7 +7,7 @@ Changelog
 - Added ExceptionPage, NotFoundPage and UnauthorizedPage layout-aware
   components.
 
-- Fixed default template for megrok.layout.Form component.
+- Fixed default template for grokcore.layout.Form component.
 
 1.3 (2011-01-12)
 ----------------

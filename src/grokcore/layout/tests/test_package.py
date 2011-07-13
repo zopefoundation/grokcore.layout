@@ -2,7 +2,7 @@
 
 import unittest
 import pkg_resources
-import megrok.layout.tests
+import grokcore.layout.tests
 from zope.testing import doctest
 
 
@@ -10,7 +10,7 @@ def make_test(dottedname):
     test = doctest.DocTestSuite(
         dottedname,
         optionflags=doctest.ELLIPSIS + doctest.NORMALIZE_WHITESPACE)
-    test.layer = megrok.layout.tests.MegrokLayoutLayer(megrok.layout.tests)
+    test.layer = grokcore.layout.tests.GrokcoreLayoutLayer(grokcore.layout.tests)
     return test
 
 
@@ -25,7 +25,7 @@ def suiteFromPackage(name):
         if filename == '__init__.py':
             continue
 
-        dottedname = 'megrok.layout.tests.%s.%s' % (name, filename[:-3])
+        dottedname = 'grokcore.layout.tests.%s.%s' % (name, filename[:-3])
         suite.addTest(make_test(dottedname))
     return suite
 

@@ -1,5 +1,5 @@
 """
-  >>> from megrok.layout import ILayout
+  >>> from grokcore.layout import ILayout
   >>> from zope.component import getMultiAdapter
   >>> from zope.publisher.browser import TestRequest
   >>> request = TestRequest()
@@ -15,16 +15,16 @@
   </html>
 
   >>> myview
-  <megrok.layout.tests.models.page.MyView object at ...>
+  <grokcore.layout.tests.models.page.MyView object at ...>
   >>> myview.layout
-  <megrok.layout.tests.models.page.Master object at ...>
+  <grokcore.layout.tests.models.page.Master object at ...>
   >>> print myview.content()
   <p> My nice Content </p>
 
 """
 import grokcore.component as grok
 from grokcore.view import templatedir
-from megrok.layout import Layout, Page
+from grokcore.layout import Layout, Page
 from zope import interface
 
 templatedir('templates')

@@ -2,13 +2,13 @@
   >>> grok.testing.grok(__name__)
   Traceback (most recent call last):
   ...
-  ConfigurationExecutionError: <class 'martian.error.GrokError'>: Multiple possible ways to render layout <class 'megrok.layout.tests.errors.renderandtemplate.MyLayout'>. It has both a 'render' method as well as an associated template.
+  ConfigurationExecutionError: <class 'martian.error.GrokError'>: Multiple possible ways to render layout <class 'grokcore.layout.tests.errors.renderandtemplate.MyLayout'>. It has both a 'render' method as well as an associated template.
   in:
   <BLANKLINE>
 """
 
 import grokcore.component as grok
-from megrok.layout import Layout
+from grokcore.layout import Layout
 from zope.interface import Interface
 
 

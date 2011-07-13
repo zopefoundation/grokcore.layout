@@ -7,7 +7,7 @@
   
   <include package="zope.annotation" />
   <include package="zope.security" />
-  <include package="megrok.layout" />  
+  <include package="grokcore.layout" />  
 
   <grok:grok package=".layout" />
   <grok:grok package=".models" />

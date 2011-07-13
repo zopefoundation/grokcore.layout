@@ -1,8 +1,8 @@
 =============
-megrok.layout
+grokcore.layout
 =============
 
-The `megrok.layout` package provides a simple way to write view
+The `grokcore.layout` package provides a simple way to write view
 components which can be included into a defined layout. It turns
 around two main components : the Page and the Layout.
 
@@ -16,7 +16,7 @@ it is a class based on the view components interface, providing a
 
 Let's implement a simple Layout:
 
-  >>> from megrok.layout import Layout
+  >>> from grokcore.layout import Layout
   >>> from zope.interface import Interface
   >>> import grokcore.component as grok
 
@@ -34,7 +34,7 @@ We grok our component:
 
 We check it has been correctly registered:
 
-  >>> from megrok.layout import ILayout
+  >>> from grokcore.layout import ILayout
   >>> from zope.component import getMultiAdapter
   >>> from zope.publisher.browser import TestRequest
 
@@ -66,7 +66,7 @@ First, we'll create 2 models that will serve as exemples.
 
 Let's create now a page that will display their description.
 
-  >>> from megrok.layout import Page
+  >>> from grokcore.layout import Page
   >>> class AnimalDisplay(Page):
   ...    grok.name('display')
   ... 	 grok.context(Interface)

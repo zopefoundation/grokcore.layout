@@ -1,5 +1,5 @@
 """
-  >>> from megrok.layout import ILayout
+  >>> from grokcore.layout import ILayout
   >>> from zope.component import getMultiAdapter
   >>> from zope.publisher.browser import TestRequest
 
@@ -69,9 +69,9 @@
   </html>
 
   >>> myview
-  <megrok.layout.tests.models.forms.MyView object at ...>
+  <grokcore.layout.tests.models.forms.MyView object at ...>
   >>> myview.layout
-  <megrok.layout.tests.models.forms.Master object at ...>
+  <grokcore.layout.tests.models.forms.Master object at ...>
   >>> print myview.content()
    <table class="listing">
     <thead>
@@ -144,9 +144,9 @@
   <BLANKLINE>
 
   >>> myeditview
-  <megrok.layout.tests.models.forms.MyEditView object at ...>
+  <grokcore.layout.tests.models.forms.MyEditView object at ...>
   >>> myeditview.layout
-  <megrok.layout.tests.models.forms.Master object at ...>
+  <grokcore.layout.tests.models.forms.Master object at ...>
   >>> print myeditview.content()
   <form action="http://127.0.0.1" method="post"
         class="edit-form" enctype="multipart/form-data">
@@ -160,7 +160,7 @@
 import grokcore.component as grok
 
 from grokcore.view import templatedir
-from megrok.layout import Layout, DisplayForm, EditForm, Form
+from grokcore.layout import Layout, DisplayForm, EditForm, Form
 from zope import interface, schema
 
 

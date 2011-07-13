@@ -1,5 +1,5 @@
 """
-  >>> from megrok.layout import ILayout
+  >>> from grokcore.layout import ILayout
   >>> from zope.component import getMultiAdapter
   >>> from zope.publisher.browser import TestRequest
   >>> request = TestRequest()
@@ -10,7 +10,7 @@
 """
 
 import grokcore.component as grok
-from megrok.layout import Layout
+from grokcore.layout import Layout
 
 
 class Dummy(grok.Context):

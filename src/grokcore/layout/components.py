@@ -6,7 +6,7 @@ import grokcore.message
 import grokcore.view
 import zope.component
 
-from megrok.layout.interfaces import IPage, ILayout
+from grokcore.layout.interfaces import IPage, ILayout
 from zope.interface import Interface
 import zope.publisher.interfaces
 import zope.security.interfaces

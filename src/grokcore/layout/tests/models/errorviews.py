@@ -2,8 +2,8 @@
     >>> from zope.component import getMultiAdapter
     >>> from zope.publisher.browser import TestRequest
     >>> view = getMultiAdapter((Exception(), TestRequest()), name='index')
-    >>> import megrok.layout
-    >>> isinstance(view, megrok.layout.ExceptionPage)
+    >>> import grokcore.layout
+    >>> isinstance(view, grokcore.layout.ExceptionPage)
     True
     >>> print view.render()
     A system error occurred.
@@ -42,7 +42,7 @@
 import grokcore.component as grok
 
 from grokcore.view import templatedir
-from megrok.layout import Layout, ExceptionPage, NotFoundPage, UnauthorizedPage
+from grokcore.layout import Layout, ExceptionPage, NotFoundPage, UnauthorizedPage
 
 templatedir('templates')
 

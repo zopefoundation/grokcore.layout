@@ -1,5 +1,5 @@
 """
-  >>> from megrok.layout import ILayout
+  >>> from grokcore.layout import ILayout
   >>> from zope.component import getMultiAdapter
   >>> from zope.publisher.browser import TestRequest
   >>> request = TestRequest()
@@ -9,7 +9,7 @@
   True
 
   >>> mylayout.context
-  <megrok.layout.tests.layout.layout.Mammoth object at ...>
+  <grokcore.layout.tests.layout.layout.Mammoth object at ...>
 
   >>> mylayout.render()
   '<div> MyLayout </div>'
@@ -22,7 +22,7 @@
 
 import grokcore.component as grok
 from zope.interface import Interface
-from megrok.layout import Layout
+from grokcore.layout import Layout
 
 
 class Mammoth(grok.Context):

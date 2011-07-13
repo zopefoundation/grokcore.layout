@@ -3,7 +3,7 @@
 import martian
 import zope.component
 import grokcore.component
-from megrok.layout import ILayout, Layout
+from grokcore.layout import ILayout, Layout
 from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 from grokcore.view.meta.views import TemplateGrokker
 

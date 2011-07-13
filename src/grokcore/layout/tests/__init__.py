@@ -18,7 +18,7 @@ from zope.traversing.interfaces import ITraversable
 from zope.traversing.testing import setUp as traversingSetUp
 
 
-class MegrokLayoutLayer(ZCMLFileLayer):
+class GrokcoreLayoutLayer(ZCMLFileLayer):
 
     def setUp(self):
         ZCMLFileLayer.setUp(self)

@@ -2,13 +2,13 @@
 
 import doctest
 import unittest
-import megrok.layout.tests
+import grokcore.layout.tests
 from grokcore.component.testing import grok_component
 
 
 def test_suite():
     optionflags = doctest.NORMALIZE_WHITESPACE | doctest.ELLIPSIS
-    globs = {'grok_component': grok_component, '__name__': 'megrok.layout'}
+    globs = {'grok_component': grok_component, '__name__': 'grokcore.layout'}
     suite = unittest.TestSuite()
 
     suite.addTest(
@@ -16,6 +16,6 @@ def test_suite():
             '../README.txt',
             optionflags=optionflags,
             globs=globs))
-    suite.layer = megrok.layout.tests.ZCMLFileLayer(megrok.layout.tests)
+    suite.layer = grokcore.layout.tests.ZCMLFileLayer(grokcore.layout.tests)
 
     return suite

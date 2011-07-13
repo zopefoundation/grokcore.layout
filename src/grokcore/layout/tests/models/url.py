@@ -12,14 +12,14 @@
   >>> request = TestRequest()
   >>> view = getMultiAdapter((helmut, request), name='index')
   >>> view
-  <megrok.layout.tests.models.url.Index object at ...>
+  <grokcore.layout.tests.models.url.Index object at ...>
 
   >>> print view.application_url()
   http://127.0.0.1
 
   >>> form = getMultiAdapter((helmut, request), name='form')
   >>> form
-  <megrok.layout.tests.models.url.BearForm object at ...>
+  <grokcore.layout.tests.models.url.BearForm object at ...>
 
   >>> print form.application_url()
   http://127.0.0.1
@@ -27,7 +27,7 @@
 """
 
 import grokcore.view as grok
-from megrok.layout import Page, Layout, Form
+from grokcore.layout import Page, Layout, Form
 from zope.interface import Interface, implements
 
 grok.templatedir("templates")

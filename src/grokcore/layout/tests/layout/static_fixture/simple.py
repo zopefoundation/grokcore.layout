@@ -1,5 +1,5 @@
 import grokcore.component as grok
-from megrok.layout import Layout
+from grokcore.layout import Layout
 
 class Dummy(grok.Context):
     pass

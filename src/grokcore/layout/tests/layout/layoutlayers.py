@@ -24,7 +24,7 @@
 """
 
 import grokcore.view as grok
-from megrok.layout import Layout, Page
+from grokcore.layout import Layout, Page
 from zope.interface import Interface
 
 

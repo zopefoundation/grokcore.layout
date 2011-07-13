@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-readme_filename = os.path.join('src', 'megrok', 'layout', 'README.txt')
+readme_filename = os.path.join('src', 'grokcore', 'layout', 'README.txt')
 long_description = open(readme_filename).read() + '\n\n' + \
                    open('CHANGES.txt').read()
 
@@ -16,7 +16,7 @@ test_requires = [
     'zope.traversing',
     ]
 
-setup(name='megrok.layout',
+setup(name='grokcore.layout',
       version='1.4dev',
       description="A layout component package for zope3 and Grok.",
       long_description = long_description,
@@ -31,11 +31,11 @@ setup(name='megrok.layout',
       keywords='grok layout zope3 pagelet theming',
       author='Souheil Chelfouh',
       author_email='trollfot@gmail.com',
-      url='http://pypi.python.org/pypi/megrok.layout',
+      url='http://pypi.python.org/pypi/grokcore.layout',
       license='GPL',
       packages=find_packages('src', exclude=['ez_setup']),
       package_dir={'': 'src'},
-      namespace_packages=['megrok'],
+      namespace_packages=['grokcore'],
       include_package_data=True,
       zip_safe=False,
       extras_require={'test': test_requires},

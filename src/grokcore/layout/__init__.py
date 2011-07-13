@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from megrok.layout.interfaces import ILayout, IPage
-from megrok.layout.components import Layout, Page, Form
-from megrok.layout.components import AddForm, EditForm, DisplayForm
-from megrok.layout.components import UnauthorizedPage, NotFoundPage
-from megrok.layout.components import ExceptionPage
+from grokcore.layout.interfaces import ILayout, IPage
+from grokcore.layout.components import Layout, Page, Form
+from grokcore.layout.components import AddForm, EditForm, DisplayForm
+from grokcore.layout.components import UnauthorizedPage, NotFoundPage
+from grokcore.layout.components import ExceptionPage

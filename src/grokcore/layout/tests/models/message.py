@@ -1,5 +1,5 @@
 """
-  >>> from megrok.layout import ILayout
+  >>> from grokcore.layout import ILayout
   >>> from zope.component import getMultiAdapter
   >>> from zope.publisher.browser import TestRequest
 
@@ -38,7 +38,7 @@
 import grokcore.component as grok
 from grokcore.view import templatedir
 from zope.interface import Interface
-from megrok.layout import Layout, Page, Form
+from grokcore.layout import Layout, Page, Form
 
 templatedir('templates')
 
