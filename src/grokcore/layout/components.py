@@ -90,7 +90,7 @@ class LayoutAware(object):
         return mapply(self.render, (), self.request)
 
 
-class LayoutAwareForm(LayoutAware):
+class LayoutAwareFormPage(LayoutAware):
     """A mixin to make form aware of layouts.
     """
     def __call__(self):
@@ -157,28 +157,28 @@ default_display_template.__grok_name__ = 'default_display_form'
 grokcore.view.templatedir('templates')
 
 
-class Form(LayoutAwareForm, grokcore.formlib.Form):
+class FormPage(LayoutAwareFormPage, grokcore.formlib.Form):
     """A form base class.
     """
     grok.baseclass()
     template = default_form_template
 
 
-class AddForm(LayoutAwareForm, grokcore.formlib.AddForm):
+class AddFormPage(LayoutAwareFormPage, grokcore.formlib.AddForm):
     """Base add form.
     """
     grok.baseclass()
     template = default_form_template
 
 
-class EditForm(LayoutAwareForm, grokcore.formlib.EditForm):
+class EditFormPage(LayoutAwareFormPage, grokcore.formlib.EditForm):
     """Base edit form.
     """
     grok.baseclass()
     template = default_form_template
 
 
-class DisplayForm(LayoutAwareForm, grokcore.formlib.DisplayForm):
+class DisplayFormPage(LayoutAwareFormPage, grokcore.formlib.DisplayForm):
     """Base display form.
     """
     grok.baseclass()

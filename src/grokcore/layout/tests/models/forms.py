@@ -8,8 +8,8 @@
 
   >>> mylayout = getMultiAdapter((request, cow), ILayout)
 
-  Form:
-  >>> myform = getMultiAdapter((cow, request), name='myform')
+  FormPage:
+  >>> myform = getMultiAdapter((cow, request), name='myformpage')
   >>> print myform()
   <html>
    <body>
@@ -160,7 +160,7 @@
 import grokcore.component as grok
 
 from grokcore.view import templatedir
-from grokcore.layout import Layout, DisplayForm, EditForm, Form
+from grokcore.layout import Layout, DisplayFormPage, EditFormPage, FormPage
 from zope import interface, schema
 
 
@@ -181,12 +181,12 @@ class Master(Layout):
     grok.context(Cow)
 
 
-class MyView(DisplayForm):
+class MyView(DisplayFormPage):
     grok.context(Cow)
 
 
-class MyEditView(EditForm):
+class MyEditView(EditFormPage):
     grok.context(Cow)
 
-class MyForm(Form):
+class MyFormPage(FormPage):
     grok.context(Cow)
