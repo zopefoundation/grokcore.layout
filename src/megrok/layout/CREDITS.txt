@@ -1,0 +1,29 @@
+=======
+Credits
+=======
+
+Authors
+-------
+
+  - Sylvain Viollon <info at infrae com>
+
+  - Christian Klinger <cklinger at novareto.de>
+
+  - Souheil Chelfouh <trollfot at gmail.com>
+
+
+Sponsors
+--------
+
+This package has been sponsorised by NPAI for the Postaleo project and
+Infrae for the Silva project. Endorsed by the Dolmen project.
+
+  - http://www.npai.fr
+
+  - http://www.postaleo.net
+
+  - http://www.infrae.com
+
+  - http://www.infrae.com/products/silva
+
+  - http://www.dolmen-project.org

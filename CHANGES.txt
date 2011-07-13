@@ -1,0 +1,119 @@
+Changelog
+=========
+
+1.4 (unreleased)
+----------------
+
+- Added ExceptionPage, NotFoundPage and UnauthorizedPage layout-aware
+  components.
+
+- Fixed default template for megrok.layout.Form component.
+
+1.3 (2011-01-12)
+----------------
+
+- Compatibility with grokcore.view 2.3.
+
+1.2.0 (2010-12-16)
+------------------
+
+- Update to use the new TemplateGrokker from grokcore.view.
+
+1.1.0 (2010-03-03)
+------------------
+
+- ``z3c.flashmessage`` has been dropped in favor of
+  ``grokcore.message``. This new package takes in charge the
+  registration of the utilities and retains the existing API. The
+  back-compatibility is assured.
+
+1.0.2 (2010-02-26)
+------------------
+
+- The existence test for the `application_url` site-lookup was
+  wrongly using a "if not" statement. In a case of a container, the object
+  is evaluated to False if it's empty. We now use a proper "if .. is
+  None". [trollfot]
+
+1.0.1 (2010-02-25)
+------------------
+
+- Forms now inherit from `UtilityView` and therefore get the
+  `application_url` and `flash` methods. Tests have been added to
+  garanty the behavior. [trollfot]
+
+1.0 (2010-02-25)
+----------------
+
+- The dependencies have been heavily cleaned up. All zope.app packages
+  have been removed. We are now running with minimal dependencies and
+  using the latest ZTK. This release will probably *not* run on
+  `Grok 1.0`. You will need `Grok 1.1rc1` to be able to use
+  it. [trollfot]
+
+- Added a component called UtilityView that provides two useful
+  methods : application_url, flash. These methods are almost a copy of
+  what can be found in the `Grok` package. The application_url is
+  using a simple getSite hook to get the root of the application. This
+  might be irrelevant for some applications and can be overriden.
+  [trollfot]
+
+- Added a module called 'messages' that contains the flash messages
+  utilities. This module is *NOT* grokked and must be grokked
+  manually. This prevents conflicts with grokui.admin's own
+  definitions of the very same components. It also allows you to
+  override the `flash` method to use something else than
+  z3c.flashmessage and then not be bothered by useless utilities. The
+  flash messages utilities can be registered by including the
+  ``messages.zcml`` file in your own project or package ZCML file.
+  [trollfot]
+
+0.9 (2009-09-26)
+----------------
+
+- Add default templates to form which doesn't contain an html and body
+  tag.
+  [sylvain]
+
+- Add an AddForm, EditForm and DisplayForm, all aware of the layout
+  component.
+  [sylvain]
+
+0.8 (2009-09-17)
+----------------
+
+- Remove the CodePage, since CodeView have been removed from
+  grokcore.view.
+  [sylvain]
+
+0.7 (2009-09-15)
+----------------
+
+- Add a CodePage to be compatible with the last version of
+  grokcore.view (higher than 1.9). This breaks compatibility with
+  previous release. You need to change any Page using a render method
+  to a CodePage.
+  [sylvain]
+
+- The content property on a Page is no longer a property, but a method
+  as it's hidding exceptions. You might need to update your code to
+  reflect that change as well.
+  [sylvain]
+
+- Fix MANIFEST.in.
+  [sylvain]
+
+0.6 (2009-09-14)
+----------------
+
+- switch the arguments order in calling the layout
+  [cklinger, sylvain]
+
+- add the CHANGES.txt
+  [cklinger]
+
+0.5 (2009-07-24)
+----------------
+
+- remove the grok dependency
+  [cklinger trollfot]
