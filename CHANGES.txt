@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.4 (unreleased)
+1.4 (2011-07-13)
 ----------------
 
 - Rename megrok.layout to grokcore.layout. ``application_url`` and ``flash``
