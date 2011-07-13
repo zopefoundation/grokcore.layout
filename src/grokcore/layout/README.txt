@@ -1,6 +1,6 @@
-=============
+===============
 grokcore.layout
-=============
+===============
 
 The `grokcore.layout` package provides a simple way to write view
 components which can be included into a defined layout. It turns
@@ -104,6 +104,6 @@ with the help of the 'content' method:
 Forms & Errorpages
 ==================
 
-Baseclasses for Form views (Form, AddForm, EditForm and DisplayForm) and Error
+Baseclasses for Form views (FormPage, AddFormPage, EditFormPage and DisplayFormPage) and Error
 views (NotFoundPage, ExceptionPage, UnauthorizedPage) are available which are
 all aware of Layout components like Page is.
