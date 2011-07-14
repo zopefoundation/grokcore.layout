@@ -11,7 +11,8 @@ Changelog
 ----------------
 
 - Rename megrok.layout to grokcore.layout. ``application_url`` and ``flash``
-  utilities have been removed, *Form components have been renamed to *FormPage.
+  utilities have been removed, \*Form components have been renamed to
+  \*FormPage.
 
 - Added ExceptionPage, NotFoundPage and UnauthorizedPage layout-aware
   components.
