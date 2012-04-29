@@ -4,8 +4,8 @@ Changelog
 1.5 (unreleased)
 ----------------
 
-- Nothing changed yet.
-
+- Change how the static resources are associated to a ``Layout``,
+  using the new name ``__static_name__`` set by the template grokker.
 
 1.4 (2011-07-13)
 ----------------

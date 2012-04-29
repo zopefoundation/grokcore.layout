@@ -1,17 +1,17 @@
 import os
 
+from grokcore.layout.interfaces import IPage, ILayout
+from zope.interface import Interface
+from zope.publisher.publish import mapply
+
 import grokcore.component as grok
 import grokcore.formlib
 import grokcore.view
 import zope.component
-
-from grokcore.layout.interfaces import IPage, ILayout
-from zope.interface import Interface
+import zope.errorview.browser
+import zope.interface.common.interfaces
 import zope.publisher.interfaces
 import zope.security.interfaces
-from zope.publisher.publish import mapply
-import zope.interface.common.interfaces
-import zope.errorview.browser
 
 
 class Layout(grokcore.view.ViewSupport):
@@ -25,10 +25,12 @@ class Layout(grokcore.view.ViewSupport):
         self.request = request
         self.view = None
 
-        if getattr(self, 'module_info', None) is not None:
+        static_name = getattr(self, '__static_name__', None)
+        if static_name is not None:
             self.static = zope.component.queryAdapter(
-                self.request, Interface,
-                name=self.module_info.package_dotted_name)
+                self.request,
+                Interface,
+                name=static_name)
         else:
             self.static = None
 
