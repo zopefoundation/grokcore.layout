@@ -3,6 +3,7 @@
 import martian
 import zope.component
 import grokcore.component
+import grokcore.component.util
 from grokcore.layout import ILayout, Layout
 from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 from grokcore.view.meta.views import TemplateGrokker
@@ -36,7 +37,7 @@ class LayoutGrokker(martian.ClassGrokker):
         adapts = (layer, context)
         config.action(
             discriminator=('adapter', adapts, ILayout),
-            callable=zope.component.provideAdapter,
+            callable=grokcore.component.util.provideAdapter,
             args=(factory, adapts, ILayout),
             )
         return True
