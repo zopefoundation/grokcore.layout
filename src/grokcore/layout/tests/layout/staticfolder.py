@@ -3,16 +3,16 @@
   >>> from zope.component import getMultiAdapter
   >>> from zope.publisher.browser import TestRequest
   >>> request = TestRequest()
-  >>> from grokcore.layout.tests.layout.static_fixture.simple import Dummy 
+  >>> from grokcore.layout.tests.layout.static_fixture.simple import Dummy
   >>> mongo = Dummy()
   >>> mylayout = getMultiAdapter((request, mongo), ILayout)
   >>> mylayout.static
-  <grokcore.view.ftests.staticdir.simple.DummyResource object at 0...>
+  <grokcore.view.ftests.static.simple.DummyResource object at 0...>
 """
 
 import grokcore.component as grok
 from grokcore.layout import Layout
-from grokcore.view.ftests.staticdir.simple import DummyResource
+from grokcore.view.ftests.static.simple import DummyResource
 
 import zope.component
 import zope.interface
