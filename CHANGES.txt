@@ -4,6 +4,11 @@ Changelog
 1.5 (unreleased)
 ----------------
 
+- Add a directive ``layout`` to select a different type of layout. A layout
+  type is defined on a ``Layout`` component with the help of the
+  ``grokcore.component.provides`` directive. It defaults to ``ILayout``
+  for compatibility.
+
 - Change how the static resources are associated to a ``Layout``,
   using the new name ``__static_name__`` set by the template grokker.
 
