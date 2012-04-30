@@ -42,3 +42,4 @@ class IBaseClasses(Interface):
 class IGrokcoreLayoutAPI(IBaseClasses):
     """Grokcore layout API.
     """
+    layout = Attribute("Directive used to specify layout on a page.")

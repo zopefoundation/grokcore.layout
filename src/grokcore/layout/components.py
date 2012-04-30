@@ -4,6 +4,7 @@ from grokcore.layout.interfaces import IPage, ILayout
 from zope.interface import Interface
 from zope.publisher.publish import mapply
 
+import martian
 import grokcore.component as grok
 import grokcore.formlib
 import grokcore.view
@@ -12,6 +13,12 @@ import zope.errorview.browser
 import zope.interface.common.interfaces
 import zope.publisher.interfaces
 import zope.security.interfaces
+
+
+class layout(martian.Directive):
+     scope = martian.CLASS_OR_MODULE
+     store = martian.ONCE
+     default = ILayout
 
 
 class Layout(grokcore.view.ViewSupport):
@@ -71,8 +78,9 @@ class LayoutAware(object):
     layout = None
 
     def __call__(self):
+        wanted = layout.bind().get(self)
         self.layout = zope.component.getMultiAdapter(
-            (self.request, self.context), ILayout)
+            (self.request, self.context), wanted)
         mapply(self.update, (), self.request)
         if self.request.response.getStatus() in (302, 303):
             # A redirect was triggered somewhere in update().  Don't
