@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 
-import martian
-import zope.component
+from grokcore.layout import ILayout, Layout
+from grokcore.view.meta.views import TemplateGrokker
+from zope.publisher.interfaces.browser import IDefaultBrowserLayer
+
 import grokcore.component
 import grokcore.component.util
-from grokcore.layout import ILayout, Layout
-from zope.publisher.interfaces.browser import IDefaultBrowserLayer
-from grokcore.view.meta.views import TemplateGrokker
+import martian
 
 
 class LayoutTemplateGrokker(TemplateGrokker):
@@ -27,17 +27,18 @@ class LayoutGrokker(martian.ClassGrokker):
     martian.component(Layout)
     martian.directive(grokcore.component.context)
     martian.directive(grokcore.view.layer, default=IDefaultBrowserLayer)
+    martian.directive(grokcore.component.provides, default=ILayout)
 
     def grok(self, name, factory, module_info, **kw):
         factory.module_info = module_info
         return super(LayoutGrokker, self).grok(
             name, factory, module_info, **kw)
 
-    def execute(self, factory, config, context, layer, **kw):
+    def execute(self, factory, config, context, layer, provides, **kw):
         adapts = (layer, context)
         config.action(
-            discriminator=('adapter', adapts, ILayout),
+            discriminator=('adapter', adapts, provides),
             callable=grokcore.component.util.provideAdapter,
-            args=(factory, adapts, ILayout),
+            args=(factory, adapts, provides),
             )
         return True
