@@ -38,7 +38,7 @@ setup(name='grokcore.layout',
       zip_safe=False,
       extras_require={'test': test_requires},
       install_requires=[
-          'grokcore.component',
+          'grokcore.component >= 2.5dev',
           'grokcore.formlib',
           'grokcore.security[role] >= 1.6dev',
           'grokcore.view >= 2.3',
