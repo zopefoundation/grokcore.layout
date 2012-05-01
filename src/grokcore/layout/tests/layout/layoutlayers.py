@@ -68,8 +68,9 @@ class BLayout(Layout):
         return "B Layout"
 
 
-class MyView(Page):
+class MyViewA(Page):
     grok.context(Interface)
+    grok.name('myview')
     grok.layer(IDefaultLayer)
 
     def render(self):
@@ -78,6 +79,7 @@ class MyView(Page):
 
 class MyViewB(Page):
     grok.context(Interface)
+    grok.name('myview')
     grok.layer(IAnotherLayer)
 
     def render(self):

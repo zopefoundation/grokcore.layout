@@ -32,6 +32,6 @@ def suiteFromPackage(name):
 
 def test_suite():
     suite = unittest.TestSuite()
-    for name in ['layout', 'models', 'errors']:
+    for name in ['layout', 'errors']:
         suite.addTest(suiteFromPackage(name))
     return suite
