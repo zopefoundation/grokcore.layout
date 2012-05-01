@@ -24,7 +24,6 @@ def suiteFromPackage(name):
             continue
         if filename == '__init__.py':
             continue
-
         dottedname = 'grokcore.layout.tests.%s.%s' % (name, filename[:-3])
         suite.addTest(make_test(dottedname))
     return suite
@@ -32,6 +31,6 @@ def suiteFromPackage(name):
 
 def test_suite():
     suite = unittest.TestSuite()
-    for name in ['layout', 'errors']:
+    for name in ['layout', 'models', 'errors']:
         suite.addTest(suiteFromPackage(name))
     return suite
