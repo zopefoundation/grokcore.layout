@@ -40,7 +40,7 @@ setup(name='grokcore.layout',
       install_requires=[
           'grokcore.component',
           'grokcore.formlib',
-          'grokcore.security',
+          'grokcore.security[role] >= 1.6dev',
           'grokcore.view >= 2.3',
           'martian',
           'setuptools',
