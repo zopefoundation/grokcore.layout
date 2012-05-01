@@ -37,7 +37,7 @@ class LayoutGrokker(martian.ClassGrokker):
         adapts = (layer, context)
         config.action(
             discriminator=('adapter', adapts, provides),
-            callable=grokcore.component..provideAdapter,
+            callable=grokcore.component.provideAdapter,
             args=(factory, adapts, provides),
             )
         return True
