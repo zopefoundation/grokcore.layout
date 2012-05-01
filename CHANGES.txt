@@ -4,6 +4,9 @@ Changelog
 1.5 (unreleased)
 ----------------
 
+- Move the layout-aware form components to the grok package where the
+  dependency with grokcore.formib can be mixed in.
+
 - Add a directive ``layout`` to select a different type of layout. A layout
   type is defined on a ``Layout`` component with the help of the
   ``grokcore.component.provides`` directive. It defaults to ``ILayout``

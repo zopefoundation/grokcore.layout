@@ -24,14 +24,6 @@ class IBaseClasses(Interface):
 
     Layout = Attribute("Base class for layout.")
 
-    FormPage = Attribute("Base class for form page.")
-
-    AddFormPage = Attribute("Base class for add form page.")
-
-    EditFormPage = Attribute("Base class for edit form page.")
-
-    DisplayFormPage = Attribute("Base class for diplay form layout.")
-
     UnauthorizedPage = Attribute("Base class for unauthorized page.")
 
     NotFoundPage = Attribute("Base class for not found page.")
