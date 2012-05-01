@@ -5,7 +5,6 @@ from grokcore.view.meta.views import TemplateGrokker
 from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 
 import grokcore.component
-import grokcore.component.util
 import martian
 
 
@@ -38,7 +37,7 @@ class LayoutGrokker(martian.ClassGrokker):
         adapts = (layer, context)
         config.action(
             discriminator=('adapter', adapts, provides),
-            callable=grokcore.component.util.provideAdapter,
+            callable=grokcore.component..provideAdapter,
             args=(factory, adapts, provides),
             )
         return True
