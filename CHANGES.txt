@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.5 (unreleased)
+1.5 (2012-05-02)
 ----------------
 
 - Move the layout-aware form components to the grok package where the
