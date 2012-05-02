@@ -1,11 +1,10 @@
 Changelog
 =========
 
-1.6 (unreleased)
-----------------
+1.5.1 (2012-05-02)
+------------------
 
-- Nothing changed yet.
-
+- Do not require the [role] extra of grokcore.security anymore.
 
 1.5 (2012-05-02)
 ----------------
