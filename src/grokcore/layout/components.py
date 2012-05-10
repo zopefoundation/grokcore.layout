@@ -76,10 +76,13 @@ class LayoutAware(object):
 
     layout = None
 
-    def __call__(self):
+    def _get_layout(self):
         wanted = layout.bind().get(self)
-        self.layout = zope.component.getMultiAdapter(
+        return zope.component.getMultiAdapter(
             (self.request, self.context), wanted)
+
+    def __call__(self):
+        self.layout = self._get_layout()
         mapply(self.update, (), self.request)
         if self.request.response.getStatus() in (302, 303):
             # A redirect was triggered somewhere in update().  Don't
