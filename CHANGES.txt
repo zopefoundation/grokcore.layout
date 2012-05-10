@@ -1,11 +1,11 @@
 Changelog
 =========
 
-1.5.2 (unreleased)
+1.6 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- Moved the lookup for a specific layout to a helper method, so other
+  layout aware components can use the same lookup.
 
 1.5.1 (2012-05-02)
 ------------------
