@@ -1,16 +1,18 @@
 # -*- coding: utf-8 -*-
-
+import doctest
 import unittest
 import pkg_resources
 import grokcore.layout.tests
-from zope.testing import doctest
+
+
+layer = grokcore.layout.tests.GrokcoreLayoutLayer(grokcore.layout.tests)
 
 
 def make_test(dottedname):
     test = doctest.DocTestSuite(
         dottedname,
         optionflags=doctest.ELLIPSIS + doctest.NORMALIZE_WHITESPACE)
-    test.layer = grokcore.layout.tests.GrokcoreLayoutLayer(grokcore.layout.tests)
+    test.layer = layer
     return test
 
 
