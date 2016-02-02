@@ -1,2 +1,7 @@
-recursive-include src/grokcore/layout *.txt *.py *.zcml *.pt
-recursive-include docs *.txt
+global-include *.mo
+include *.txt
+include *.rst
+include bootstrap.py
+include buildout.cfg
+include .travis.yml
+recursive-include src *.pt *.py *.txt *.zcml
