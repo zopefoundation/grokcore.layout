@@ -5,7 +5,7 @@
   >>> request = TestRequest()
   >>> mongo = Dummy()
   >>> mylayout = getMultiAdapter((request, mongo), ILayout)
-  >>> print mylayout.static
+  >>> print(mylayout.static)
   None
 """
 
@@ -17,6 +17,6 @@ class Dummy(grok.Context):
     pass
 
 class MyLayout(Layout):
-    
+
     def render(self):
         return ""

@@ -5,9 +5,9 @@
     >>> import grokcore.layout
     >>> isinstance(view, grokcore.layout.ExceptionPage)
     True
-    >>> print view.render()
+    >>> print(view.render())
     A system error occurred.
-    >>> print view()
+    >>> print(view())
     <html>
     <body>
     <div class="layout">A system error occurred.</div>
@@ -20,7 +20,7 @@
     >>> request = TestRequest()
     >>> request.setPrincipal(MockPrincipal())
     >>> errorpage = getMultiAdapter((Unauthorized(), request), name='index')
-    >>> print errorpage()
+    >>> print(errorpage())
     <html>
     <body>
     <div class="layout">Access to the requested resource is forbidden.</div>
@@ -31,7 +31,7 @@
     >>> request = TestRequest()
     >>> errorpage = getMultiAdapter(
     ...     (NotFound(None, request), request), name='index')
-    >>> print errorpage()
+    >>> print(errorpage())
     <html>
     <body>
     <div class="layout">The requested resource can not be found.</div>

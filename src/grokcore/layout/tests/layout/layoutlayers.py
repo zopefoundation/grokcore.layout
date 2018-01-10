@@ -10,16 +10,16 @@
 
   >>> directlyProvides(request, IDefaultLayer)
   >>> view = getMultiAdapter((a, request), name="myview")
-  >>> print view()
+  >>> print(view())
   A Layout
 
   >>> directlyProvides(request, IAnotherLayer)
   >>> view = getMultiAdapter((a, request), name="myview")
-  >>> print view()
+  >>> print(view())
   A2 Layout
 
   >>> view = getMultiAdapter((b, request), name="myview")
-  >>> print view()
+  >>> print(view())
   B Layout
 """
 

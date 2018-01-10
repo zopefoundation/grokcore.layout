@@ -41,8 +41,8 @@ We check it has been correctly registered:
   >>> layout = getMultiAdapter((TestRequest(), Interface), ILayout)
   >>> isinstance(layout, MyLayout)
   True
-  >>> layout.render()
-  u'a simple layout'
+  >>> print(layout.render())
+  a simple layout
 
 Now let's see how to use this Layout in a specific context using a Page.
 
@@ -80,10 +80,10 @@ Grokking our Page will let us use it.
   True
   >>> wooly = Mammoth()
   >>> page = getMultiAdapter((wooly, TestRequest()), name='display')
-  >>> page.content()
-  u'Looks like an elephant'
-  >>> page()
-  u'a simple layout'
+  >>> print(page.content())
+  Looks like an elephant
+  >>> print(page())
+  a simple layout
 
 As we can see, the page is using the layout, on the __call__ to
 render. Of course, this example Layout doesn't provide any interesting
@@ -98,8 +98,8 @@ with the help of the 'content' method:
 
   >>> grok_component('MammothLayout', MammothLayout)
   True
-  >>> page()
-  u'Header. Page: Looks like an elephant. Footer'
+  >>> print(page())
+  Header. Page: Looks like an elephant. Footer
 
 Forms & Errorpages
 ==================

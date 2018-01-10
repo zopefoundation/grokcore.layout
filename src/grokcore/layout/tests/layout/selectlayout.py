@@ -10,14 +10,14 @@ We test that we can retrieve the default layout for the page that
 doesn't select any specific layout::
 
   >>> view = getMultiAdapter((one, request), name="viewone")
-  >>> print view()
+  >>> print(view())
   Layout One
 
 We test that we can retrieve the default layout for the page that
 select a specific layout::
 
   >>> view = getMultiAdapter((one, request), name="viewtwo")
-  >>> print view()
+  >>> print(view())
   Layout Two
 
 """
