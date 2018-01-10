@@ -12,22 +12,22 @@ We test on the first layer layer::
 
   >>> directlyProvides(request, IALayer)
   >>> view = getMultiAdapter((one, request), name="myview")
-  >>> print view()
+  >>> print(view())
   Layout A for context One
 
   >>> view = getMultiAdapter((two, request), name="myview")
-  >>> print view()
+  >>> print(view())
   Layout A for context Two
 
 We switch the layer::
 
   >>> directlyProvides(request, IBLayer)
   >>> view = getMultiAdapter((one, request), name="myview")
-  >>> print view()
+  >>> print(view())
   Layout B for context One
 
   >>> view = getMultiAdapter((two, request), name="myview")
-  >>> print view()
+  >>> print(view())
   Layout B for context Two
 
 """

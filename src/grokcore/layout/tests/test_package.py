@@ -1,17 +1,24 @@
 # -*- coding: utf-8 -*-
 import doctest
-import unittest
-import pkg_resources
 import grokcore.layout.tests
+import pkg_resources
+import unittest
+
+from zope.testing import renormalizing
 
 
 layer = grokcore.layout.tests.GrokcoreLayoutLayer(grokcore.layout.tests)
 
 
 def make_test(dottedname):
+    checker = renormalizing.RENormalizing()
     test = doctest.DocTestSuite(
         dottedname,
-        optionflags=doctest.ELLIPSIS + doctest.NORMALIZE_WHITESPACE)
+        checker=checker,
+        optionflags=(
+            doctest.ELLIPSIS +
+            doctest.NORMALIZE_WHITESPACE +
+            renormalizing.IGNORE_EXCEPTION_MODULE_IN_PYTHON2))
     test.layer = layer
     return test
 

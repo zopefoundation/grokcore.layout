@@ -7,7 +7,7 @@
   >>> mylayout = getMultiAdapter((request, cow), ILayout)
   >>> myview = getMultiAdapter((cow, request), name='myview')
 
-  >>> print myview()
+  >>> print(myview())
   <html>
    <body>
      <div class="layout"><p> My nice Content </p></div>
@@ -18,7 +18,7 @@
   <grokcore.layout.tests.models.page.MyView object at ...>
   >>> myview.layout
   <grokcore.layout.tests.models.page.Master object at ...>
-  >>> print myview.content()
+  >>> print(myview.content())
   <p> My nice Content </p>
 
 """

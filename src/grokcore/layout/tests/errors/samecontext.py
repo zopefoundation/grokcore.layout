@@ -2,8 +2,12 @@
   >>> grok.testing.grok(__name__)
   Traceback (most recent call last):
   ...
-  ConfigurationConflictError: Conflicting configuration actions
-     For: ('adapter', (<InterfaceClass zope.publisher.interfaces.browser.IDefaultBrowserLayer>, <InterfaceClass zope.interface.Interface>), <InterfaceClass grokcore.layout.interfaces.ILayout>)
+  zope.configuration.config.ConfigurationConflictError: \
+  Conflicting configuration actions For: ('adapter', \
+  (<InterfaceClass zope.publisher.interfaces.browser.IDefaultBrowserLayer>, \
+  <InterfaceClass zope.interface.Interface>), \
+  <InterfaceClass grokcore.layout.interfaces.ILayout>)
+  
 """
 
 import grokcore.component as grok
