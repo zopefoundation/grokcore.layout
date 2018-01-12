@@ -7,12 +7,12 @@
   >>> mongo = Dummy()
   >>> mylayout = getMultiAdapter((request, mongo), ILayout)
   >>> mylayout.static
-  <grokcore.view.ftests.static.simple.DummyResource object at 0...>
+  <grokcore.view.tests.functional.static.simple.DummyResource object at 0...>
 """
 
 import grokcore.component as grok
 from grokcore.layout import Layout
-from grokcore.view.ftests.static.simple import DummyResource
+from grokcore.view.tests.functional.static.simple import DummyResource
 
 import zope.component
 import zope.interface

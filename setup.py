@@ -58,7 +58,7 @@ setup(
     install_requires=[
         'grokcore.component >= 2.5',
         'grokcore.security >= 1.6',
-        'grokcore.view >= 2.7',
+        'grokcore.view >= 3.0.3',
         'martian >= 0.14',
         'setuptools',
         'zope.authentication',
