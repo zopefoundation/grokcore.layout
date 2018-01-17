@@ -20,11 +20,11 @@ class layout(martian.Directive):
      default = ILayout
 
 
+@grok.implementer(ILayout)
 class Layout(grokcore.view.ViewSupport):
     """A layout object.
     """
     grok.baseclass()
-    grok.implements(ILayout)
 
     def __init__(self, request, context):
         self.context = context
@@ -102,11 +102,11 @@ class LayoutAware(object):
         return mapply(self.render, (), self.request)
 
 
+@grok.implementer(IPage)
 class Page(LayoutAware, grokcore.view.View):
     """A view class.
     """
     grok.baseclass()
-    grok.implements(IPage)
 
 
 class ExceptionPage(
