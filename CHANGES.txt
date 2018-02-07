@@ -4,8 +4,8 @@ Changelog
 3.0.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- Bugfix: Exception pages did not report their contents as text/html, but used
+  text/plain instead, or didnt report Content-Type at all.
 
 3.0.2 (2018-01-17)
 ------------------

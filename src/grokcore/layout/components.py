@@ -88,6 +88,8 @@ class LayoutAware(object):
             # A redirect was triggered somewhere in update().  Don't
             # continue rendering the template or doing anything else.
             return
+        self.request.response.setHeader(
+            'Content-Type', 'text/html;charset=utf-8')
         return self.layout(self)
 
     def default_namespace(self):

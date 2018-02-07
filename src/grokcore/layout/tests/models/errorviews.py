@@ -13,6 +13,8 @@
     <div class="layout">A system error occurred.</div>
     </body>
     </html>
+    >>> print(view.request.response.getHeader('Content-Type'))
+    text/html;charset=utf-8
 
     >>> from zope.security.interfaces import Unauthorized
     >>> class MockPrincipal(object):
@@ -26,6 +28,8 @@
     <div class="layout">Access to the requested resource is forbidden.</div>
     </body>
     </html>
+    >>> print(errorpage.request.response.getHeader('Content-Type'))
+    text/html;charset=utf-8
 
     >>> from zope.publisher.interfaces import NotFound
     >>> request = TestRequest()
@@ -37,6 +41,8 @@
     <div class="layout">The requested resource can not be found.</div>
     </body>
     </html>
+    >>> print(errorpage.request.response.getHeader('Content-Type'))
+    text/html;charset=utf-8
 
 """
 import grokcore.component as grok
