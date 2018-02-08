@@ -6,14 +6,14 @@
   >>> cow = Cow()
   >>> mylayout = getMultiAdapter((request, cow), ILayout)
   >>> myview = getMultiAdapter((cow, request), name='myview')
-
   >>> print(myview())
   <html>
    <body>
      <div class="layout"><p> My nice Content </p></div>
    </body>
   </html>
-
+  >>> print(myview.request.response.getHeader('Content-Type'))
+  text/html;charset=utf-8
   >>> myview
   <grokcore.layout.tests.models.page.MyView object at ...>
   >>> myview.layout

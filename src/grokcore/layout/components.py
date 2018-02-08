@@ -81,6 +81,11 @@ class LayoutAware(object):
         return zope.component.getMultiAdapter(
             (self.request, self.context), wanted)
 
+    def update(self, **kwargs):
+        super(LayoutAware, self).update(**kwargs)
+        self.request.response.setHeader(
+            'Content-Type', 'text/html;charset=utf-8')
+
     def __call__(self):
         self.layout = self._get_layout()
         mapply(self.update, (), self.request)
@@ -88,8 +93,6 @@ class LayoutAware(object):
             # A redirect was triggered somewhere in update().  Don't
             # continue rendering the template or doing anything else.
             return
-        self.request.response.setHeader(
-            'Content-Type', 'text/html;charset=utf-8')
         return self.layout(self)
 
     def default_namespace(self):
