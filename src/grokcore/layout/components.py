@@ -81,6 +81,11 @@ class LayoutAware(object):
         return zope.component.getMultiAdapter(
             (self.request, self.context), wanted)
 
+    def update(self, **kwargs):
+        super(LayoutAware, self).update(**kwargs)
+        self.request.response.setHeader(
+            'Content-Type', 'text/html;charset=utf-8')
+
     def __call__(self):
         self.layout = self._get_layout()
         mapply(self.update, (), self.request)
