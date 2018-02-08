@@ -12,12 +12,14 @@ long_description = (
 
 
 test_requires = [
+    'zope.app.wsgi[test]',
     'zope.annotation',
     'zope.container',
     'zope.schema',
     'zope.security',
     'zope.session',
     'zope.site',
+    'zope.testbrowser',
     'zope.testing',
     'zope.traversing',
     ]
