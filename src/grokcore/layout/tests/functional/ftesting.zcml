@@ -32,20 +32,5 @@
   <include package="grokcore.view" file="publication_security.zcml" />
   <include package="grokcore.layout" />
 
-
   <grok:grok package="grokcore.layout.tests.functional" />
-
-  <securityPolicy
-      component="zope.securitypolicy.zopepolicy.ZopeSecurityPolicy"
-      />
-
-  <unauthenticatedPrincipal
-      id="zope.anybody"
-      title="Unauthenticated User"
-      />
-  <grant
-      permission="zope.View"
-      principal="zope.anybody"
-      />
-
 </configure>
