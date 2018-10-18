@@ -44,7 +44,7 @@ setup(
         'Programming Language :: Python :: Implementation',
         'Programming Language :: Python :: Implementation :: CPython',
         'Programming Language :: Python :: Implementation :: PyPy',
-        'Framework :: Zope3',
+        'Framework :: Zope :: 3',
         ],
     keywords='grok layout zope3 pagelet theming',
     author='Grok Team',
