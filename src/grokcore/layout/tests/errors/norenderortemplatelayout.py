@@ -1,9 +1,9 @@
 """
-  >>> grok.testing.grok(__name__)
+  >>> grok.testing.grok(__name__)  # doctest: +IGNORE_EXCEPTION_DETAIL
   Traceback (most recent call last):
   ...
   zope.configuration.config.ConfigurationExecutionError: \
-  <class 'martian.error.GrokError'>: Layout \
+  martian.error.GrokError: Layout \
   <class 'grokcore.layout.tests.errors.norenderortemplatelayout.MyLayout'> \
   has no associated template or 'render' method...
 

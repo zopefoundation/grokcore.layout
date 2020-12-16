@@ -22,12 +22,12 @@ test_requires = [
     'zope.testbrowser',
     'zope.testing',
     'zope.traversing',
-    ]
+]
 
 
 setup(
     name='grokcore.layout',
-    version='3.0.4.dev0',
+    version='3.1.0.dev0',
     description="A layout component package for zope3 and Grok.",
     long_description=long_description,
     classifiers=[
@@ -38,14 +38,16 @@ setup(
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
         'Programming Language :: Python :: Implementation',
         'Programming Language :: Python :: Implementation :: CPython',
         'Programming Language :: Python :: Implementation :: PyPy',
         'Framework :: Zope :: 3',
-        ],
+    ],
     keywords='grok layout zope3 pagelet theming',
     author='Grok Team',
     author_email='grok-dev@zope.org',
@@ -68,5 +70,5 @@ setup(
         'zope.errorview',
         'zope.interface',
         'zope.publisher',
-        ],
+    ],
 )

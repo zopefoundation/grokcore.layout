@@ -29,12 +29,15 @@ from zope import interface
 
 templatedir('templates')
 
+
 class Cow(grok.Context):
     pass
+
 
 class Master(Layout):
     grok.name('master')
     grok.context(Cow)
+
 
 class MyView(Page):
     grok.context(interface.Interface)

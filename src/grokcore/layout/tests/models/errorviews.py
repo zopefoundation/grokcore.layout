@@ -47,20 +47,27 @@
 """
 import grokcore.component as grok
 
+from grokcore.layout import ExceptionPage
+from grokcore.layout import Layout
+from grokcore.layout import NotFoundPage
+from grokcore.layout import UnauthorizedPage
 from grokcore.view import templatedir
-from grokcore.layout import Layout, ExceptionPage, NotFoundPage, UnauthorizedPage
 
 templatedir('templates')
+
 
 class Master(Layout):
     grok.name('master')
     grok.context(Exception)
 
+
 class MyExceptionPage(ExceptionPage):
     grok.name('index')
 
+
 class MyUnauthorizedPage(UnauthorizedPage):
     grok.name('index')
+
 
 class MyNotFoundPage(NotFoundPage):
     grok.name('index')
