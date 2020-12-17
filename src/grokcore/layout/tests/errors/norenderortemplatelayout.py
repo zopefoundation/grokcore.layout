@@ -1,4 +1,5 @@
 """
+  # PY2 - remove '+IGNORE_EXCEPTION_DETAIL'  when dropping Python 2 support:
   >>> grok.testing.grok(__name__)  # doctest: +IGNORE_EXCEPTION_DETAIL
   Traceback (most recent call last):
   ...
