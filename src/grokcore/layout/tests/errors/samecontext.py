@@ -7,7 +7,7 @@
   (<InterfaceClass zope.publisher.interfaces.browser.IDefaultBrowserLayer>, \
   <InterfaceClass zope.interface.Interface>), \
   <InterfaceClass grokcore.layout.interfaces.ILayout>)
-  
+
 """
 
 import grokcore.component as grok

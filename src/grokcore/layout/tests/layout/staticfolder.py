@@ -10,8 +10,6 @@
   <grokcore.view.tests.functional.static.simple.DummyResource object at 0...>
 """
 
-import grokcore.component as grok
-from grokcore.layout import Layout
 from grokcore.view.tests.functional.static.simple import DummyResource
 
 import zope.component
@@ -19,7 +17,8 @@ import zope.interface
 from zope.publisher.interfaces.browser import IBrowserRequest
 
 
-zope.component.provideAdapter(factory=DummyResource,
+zope.component.provideAdapter(
+    factory=DummyResource,
     adapts=(IBrowserRequest,),
     provides=zope.interface.Interface,
     name='grokcore.layout.tests.layout.static_fixture')

@@ -1,5 +1,3 @@
-import os
-
 from grokcore.layout.interfaces import IPage, ILayout
 from zope.interface import Interface
 from zope.publisher.publish import mapply
@@ -15,15 +13,15 @@ import zope.security.interfaces
 
 
 class layout(martian.Directive):
-     scope = martian.CLASS_OR_MODULE
-     store = martian.ONCE
-     default = ILayout
+    scope = martian.CLASS_OR_MODULE
+    store = martian.ONCE
+    default = ILayout
 
 
 @grok.implementer(ILayout)
 class Layout(grokcore.view.ViewSupport):
-    """A layout object.
-    """
+    """A layout object."""
+
     grok.baseclass()
 
     def __init__(self, request, context):
@@ -117,8 +115,7 @@ class Page(LayoutAware, grokcore.view.View):
 class ExceptionPage(
         LayoutAware,
         zope.errorview.browser.ExceptionView,
-        grokcore.view.View
-        ):
+        grokcore.view.View):
     grok.context(zope.interface.common.interfaces.IException)
     grok.baseclass()
 
@@ -126,8 +123,7 @@ class ExceptionPage(
 class NotFoundPage(
         LayoutAware,
         zope.errorview.browser.NotFoundView,
-        grokcore.view.View
-        ):
+        grokcore.view.View):
     grok.context(zope.publisher.interfaces.INotFound)
     grok.baseclass()
 
@@ -135,7 +131,6 @@ class NotFoundPage(
 class UnauthorizedPage(
         LayoutAware,
         zope.errorview.browser.UnauthorizedView,
-        grokcore.view.View
-        ):
+        grokcore.view.View):
     grok.context(zope.security.interfaces.IUnauthorized)
     grok.baseclass()

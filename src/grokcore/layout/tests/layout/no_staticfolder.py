@@ -16,6 +16,7 @@ from grokcore.layout import Layout
 class Dummy(grok.Context):
     pass
 
+
 class MyLayout(Layout):
 
     def render(self):
