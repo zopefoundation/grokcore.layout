@@ -6,6 +6,8 @@ Changelog
 
 - Add support for Python 3.7, 3.8 and 3.9.
 
+- Update to ``zope.component >= 5``.
+
 - Drop support for Python 3.4.
 
 
@@ -13,14 +15,14 @@ Changelog
 ------------------
 
 - Bugfix: Exception pages did not report their contents as text/html, but used
-  text/plain instead (from their `zope.errorview` baseclasses). Layouts and
+  text/plain instead (from their ``zope.errorview`` base classes). Layouts and
   pages are about HTML however and the sensible default content type for those
-  is `text/html`
+  is ``text/html``.
 
 3.0.2 (2018-01-17)
 ------------------
 
-- Replace the use of `grok.implements()` with the `@grok.implementer()`
+- Replace the use of ``grok.implements()`` with the ``@grok.implementer()``.
   directive throughout.
 
 3.0.1 (2018-01-12)

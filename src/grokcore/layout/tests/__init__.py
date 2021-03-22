@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 
 import zope.component
-from zope.component.interfaces import IComponentLookup
 from zope.component.testlayer import ZCMLFileLayer
 from zope.container.interfaces import ISimpleReadContainer
 from zope.container.traversal import ContainerTraversable
 from zope.interface import Interface
+from zope.interface.interfaces import IComponentLookup
 from zope.publisher.interfaces import IRequest
 from zope.session.http import CookieClientIdManager
 from zope.session.interfaces import IClientId, IClientIdManager, ISession
