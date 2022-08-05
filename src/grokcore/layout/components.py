@@ -1,15 +1,16 @@
-from grokcore.layout.interfaces import IPage, ILayout
-from zope.interface import Interface
-from zope.publisher.publish import mapply
-
-import martian
 import grokcore.component as grok
 import grokcore.view
+import martian
 import zope.component
 import zope.errorview.browser
 import zope.interface.common.interfaces
 import zope.publisher.interfaces
 import zope.security.interfaces
+from zope.interface import Interface
+from zope.publisher.publish import mapply
+
+from grokcore.layout.interfaces import ILayout
+from grokcore.layout.interfaces import IPage
 
 
 class layout(martian.Directive):

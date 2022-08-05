@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 import doctest
-import grokcore.layout.tests
-import pkg_resources
 import unittest
 
+import pkg_resources
+
 from zope.testing import renormalizing
+
+import grokcore.layout.tests
 
 
 layer = grokcore.layout.tests.GrokcoreLayoutLayer(grokcore.layout.tests)

@@ -24,8 +24,10 @@
 """
 
 import grokcore.view as grok
-from grokcore.layout import Layout, Page
 from zope.interface import Interface
+
+from grokcore.layout import Layout
+from grokcore.layout import Page
 
 
 class IDefaultLayer(grok.IDefaultBrowserLayer):

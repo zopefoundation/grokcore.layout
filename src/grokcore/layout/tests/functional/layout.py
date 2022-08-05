@@ -16,7 +16,9 @@
 
 import grokcore.component as grok
 from grokcore.view import require
-from grokcore.layout import Layout, Page
+
+from grokcore.layout import Layout
+from grokcore.layout import Page
 
 
 class Mammoth(grok.Context):

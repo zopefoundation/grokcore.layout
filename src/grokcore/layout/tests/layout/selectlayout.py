@@ -23,7 +23,11 @@ select a specific layout::
 """
 import grokcore.view as grok
 from zope.interface import Interface
-from grokcore.layout import Layout, Page, ILayout, layout
+
+from grokcore.layout import ILayout
+from grokcore.layout import Layout
+from grokcore.layout import Page
+from grokcore.layout import layout
 
 
 class One(grok.Context):

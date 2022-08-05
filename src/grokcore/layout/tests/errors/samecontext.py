@@ -11,8 +11,9 @@
 """
 
 import grokcore.component as grok
-from grokcore.layout import Layout
 from zope.interface import Interface
+
+from grokcore.layout import Layout
 
 
 class MyLayout(Layout):

@@ -8,12 +8,16 @@ from zope.interface import Interface
 from zope.interface.interfaces import IComponentLookup
 from zope.publisher.interfaces import IRequest
 from zope.session.http import CookieClientIdManager
-from zope.session.interfaces import IClientId, IClientIdManager, ISession
+from zope.session.interfaces import IClientId
+from zope.session.interfaces import IClientIdManager
+from zope.session.interfaces import ISession
 from zope.session.interfaces import ISessionDataContainer
-from zope.session.session import ClientId, Session
+from zope.session.session import ClientId
 from zope.session.session import PersistentSessionDataContainer
+from zope.session.session import Session
 from zope.site.folder import rootFolder
-from zope.site.site import LocalSiteManager, SiteManagerAdapter
+from zope.site.site import LocalSiteManager
+from zope.site.site import SiteManagerAdapter
 from zope.traversing.interfaces import ITraversable
 from zope.traversing.testing import setUp as traversingSetUp
 

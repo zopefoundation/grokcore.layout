@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 
 from grokcore.view import interfaces
-from zope.interface import Interface, Attribute
+from zope.interface import Attribute
+from zope.interface import Interface
 
 
 class ILayout(Interface):
