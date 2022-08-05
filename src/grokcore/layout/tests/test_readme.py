@@ -2,8 +2,10 @@
 
 import doctest
 import unittest
-import grokcore.layout.tests
+
 from grokcore.component.testing import grok_component
+
+import grokcore.layout.tests
 
 
 def test_suite():

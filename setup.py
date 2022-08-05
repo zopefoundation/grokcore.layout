@@ -1,5 +1,7 @@
 import os
-from setuptools import setup, find_packages
+
+from setuptools import find_packages
+from setuptools import setup
 
 
 readme_filename = os.path.join('src', 'grokcore', 'layout', 'README.txt')
@@ -12,9 +14,10 @@ long_description = (
 
 
 test_requires = [
-    'zope.app.wsgi[test]',
     'zope.annotation',
+    'zope.app.wsgi[test]',
     'zope.container',
+    'zope.login',
     'zope.schema',
     'zope.security',
     'zope.session',
@@ -43,6 +46,7 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
         'Programming Language :: Python :: Implementation',
         'Programming Language :: Python :: Implementation :: CPython',
         'Programming Language :: Python :: Implementation :: PyPy',

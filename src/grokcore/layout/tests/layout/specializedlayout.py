@@ -32,9 +32,11 @@ We switch the layer::
 
 """
 import grokcore.view as grok
-from zope.interface import Interface
-from grokcore.layout import Layout, Page
 from grokcore.view import IDefaultBrowserLayer
+from zope.interface import Interface
+
+from grokcore.layout import Layout
+from grokcore.layout import Page
 
 
 class IALayer(IDefaultBrowserLayer):

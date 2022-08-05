@@ -24,8 +24,11 @@
 """
 import grokcore.component as grok
 from grokcore.view import templatedir
-from grokcore.layout import Layout, Page
 from zope import interface
+
+from grokcore.layout import Layout
+from grokcore.layout import Page
+
 
 templatedir('templates')
 

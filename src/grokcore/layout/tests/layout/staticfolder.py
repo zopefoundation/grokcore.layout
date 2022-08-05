@@ -10,10 +10,9 @@
   <grokcore.view.tests.functional.static.simple.DummyResource object at 0...>
 """
 
-from grokcore.view.tests.functional.static.simple import DummyResource
-
 import zope.component
 import zope.interface
+from grokcore.view.tests.functional.static.simple import DummyResource
 from zope.publisher.interfaces.browser import IBrowserRequest
 
 

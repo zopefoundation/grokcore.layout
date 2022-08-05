@@ -46,12 +46,13 @@
 
 """
 import grokcore.component as grok
+from grokcore.view import templatedir
 
 from grokcore.layout import ExceptionPage
 from grokcore.layout import Layout
 from grokcore.layout import NotFoundPage
 from grokcore.layout import UnauthorizedPage
-from grokcore.view import templatedir
+
 
 templatedir('templates')
 

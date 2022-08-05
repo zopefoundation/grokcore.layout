@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 
-from grokcore.layout import ILayout, Layout
+import grokcore.component
+import martian
 from grokcore.view.meta.views import TemplateGrokker
 from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 
-import grokcore.component
-import martian
+from grokcore.layout import ILayout
+from grokcore.layout import Layout
 
 
 class LayoutTemplateGrokker(TemplateGrokker):
