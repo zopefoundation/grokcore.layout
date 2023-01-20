@@ -22,14 +22,14 @@ from grokcore.layout import Page
 
 
 class Mammoth(grok.Context):
-    name = u'Paige'
+    name = 'Paige'
 
 
 class MammothLayout(Layout):
     grok.context(Mammoth)
 
     def render(self):
-        return '<html><body>{}</body></html>'.format(self.view.content())
+        return f'<html><body>{self.view.content()}</body></html>'
 
 
 class MammothPage(Page):
@@ -38,4 +38,4 @@ class MammothPage(Page):
     require('zope.Public')
 
     def render(self):
-        return 'My name is {}'.format(self.context.name)
+        return f'My name is {self.context.name}'

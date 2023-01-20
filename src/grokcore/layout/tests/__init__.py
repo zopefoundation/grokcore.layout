@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import zope.component
 from zope.component.testlayer import ZCMLFileLayer
 from zope.container.interfaces import ISimpleReadContainer

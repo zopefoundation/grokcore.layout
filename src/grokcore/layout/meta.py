@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import grokcore.component
 import martian
 from grokcore.view.meta.views import TemplateGrokker
@@ -31,7 +29,7 @@ class LayoutGrokker(martian.ClassGrokker):
 
     def grok(self, name, factory, module_info, **kw):
         factory.module_info = module_info
-        return super(LayoutGrokker, self).grok(
+        return super().grok(
             name, factory, module_info, **kw)
 
     def execute(self, factory, config, context, layer, provides, **kw):

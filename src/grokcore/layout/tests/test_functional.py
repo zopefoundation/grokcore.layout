@@ -19,7 +19,7 @@ layer = Layer(grokcore.layout.tests.functional, allowTearDown=True)
 
 
 def suiteFromPackage(name):
-    files = resource_listdir(__name__, '{}'.format(name))
+    files = resource_listdir(__name__, f'{name}')
     suite = unittest.TestSuite()
     getRootFolder = layer.getRootFolder
     globs = dict(

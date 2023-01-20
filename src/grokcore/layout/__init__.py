@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 from grokcore.layout.components import ExceptionPage
 from grokcore.layout.components import Layout
 from grokcore.layout.components import NotFoundPage
