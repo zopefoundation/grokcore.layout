@@ -30,7 +30,7 @@ test_requires = [
 
 setup(
     name='grokcore.layout',
-    version='3.1.0.dev0',
+    version='4.0.dev0',
     description="A layout component package for zope3 and Grok.",
     long_description=long_description,
     classifiers=[
