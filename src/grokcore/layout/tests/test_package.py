@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import doctest
 import unittest
 
@@ -19,8 +18,7 @@ def make_test(dottedname):
         checker=checker,
         optionflags=(
             doctest.ELLIPSIS +
-            doctest.NORMALIZE_WHITESPACE +
-            renormalizing.IGNORE_EXCEPTION_MODULE_IN_PYTHON2))
+            doctest.NORMALIZE_WHITESPACE))
     test.layer = layer
     return test
 
@@ -35,7 +33,7 @@ def suiteFromPackage(name):
             continue
         if filename == '__init__.py':
             continue
-        dottedname = 'grokcore.layout.tests.%s.%s' % (name, filename[:-3])
+        dottedname = 'grokcore.layout.tests.{}.{}'.format(name, filename[:-3])
         suite.addTest(make_test(dottedname))
     return suite
 

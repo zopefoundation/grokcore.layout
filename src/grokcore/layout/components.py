@@ -68,7 +68,7 @@ class Layout(grokcore.view.ViewSupport):
         return self.render()
 
 
-class LayoutAware(object):
+class LayoutAware:
     """A mixin to make views aware of layouts.
     """
     grok.baseclass()
@@ -81,7 +81,7 @@ class LayoutAware(object):
             (self.request, self.context), wanted)
 
     def update(self, **kwargs):
-        super(LayoutAware, self).update(**kwargs)
+        super().update(**kwargs)
         self.request.response.setHeader(
             'Content-Type', 'text/html;charset=utf-8')
 
@@ -95,7 +95,7 @@ class LayoutAware(object):
         return self.layout(self)
 
     def default_namespace(self):
-        namespace = super(LayoutAware, self).default_namespace()
+        namespace = super().default_namespace()
         namespace['layout'] = self.layout
         return namespace
 
