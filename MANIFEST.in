@@ -8,5 +8,5 @@ include tox.ini
 
 recursive-include src *.py
 recursive-include src *.pt
-recursive-include src *.txt
+recursive-include src *.rst
 recursive-include src *.zcml

@@ -13,7 +13,7 @@ def test_suite():
 
     suite.addTest(
         doctest.DocFileSuite(
-            '../README.txt',
+            '../README.rst',
             optionflags=optionflags,
             globs=globs))
     suite.layer = grokcore.layout.tests.ZCMLFileLayer(grokcore.layout.tests)

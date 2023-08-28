@@ -4,13 +4,13 @@ from setuptools import find_packages
 from setuptools import setup
 
 
-readme_filename = os.path.join('src', 'grokcore', 'layout', 'README.txt')
+readme_filename = os.path.join('src', 'grokcore', 'layout', 'README.rst')
 
 
 long_description = (
     open(readme_filename).read() +
     '\n\n' +
-    open('CHANGES.txt').read())
+    open('CHANGES.rst').read())
 
 
 test_requires = [
@@ -31,9 +31,10 @@ test_requires = [
 setup(
     name='grokcore.layout',
     version='4.0.dev0',
-    description="A layout component package for zope3 and Grok.",
+    description="A layout component package for Grok.",
     long_description=long_description,
     classifiers=[
+        'Development Status :: 6 - Mature',
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: Zope Public License',
@@ -51,10 +52,10 @@ setup(
     ],
     keywords='grok layout zope3 pagelet theming',
     author='Grok Team',
-    author_email='grok-dev@zope.org',
-    url='http://grok.zope.org',
-    license='ZPL',
-    packages=find_packages('src', exclude=['ez_setup']),
+    author_email='zope-dev@zope.dev',
+    url='https://github.com/zopefoundation/grokcore.layout',
+    license='ZPL 2.1',
+    packages=find_packages('src'),
     package_dir={'': 'src'},
     namespace_packages=['grokcore'],
     include_package_data=True,
