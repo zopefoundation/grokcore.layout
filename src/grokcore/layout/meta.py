@@ -38,5 +38,5 @@ class LayoutGrokker(martian.ClassGrokker):
             discriminator=('adapter', adapts, provides),
             callable=grokcore.component.provideAdapter,
             args=(factory, adapts, provides),
-            )
+        )
         return True

@@ -24,12 +24,12 @@ def suiteFromPackage(name):
     getRootFolder = layer.getRootFolder
     globs = dict(
         getRootFolder=getRootFolder,
-        )
+    )
     optionflags = (
         doctest.ELLIPSIS +
         doctest.NORMALIZE_WHITESPACE +
         doctest.REPORT_NDIFF
-        )
+    )
 
     for filename in files:
         if filename == '__init__.py':
@@ -54,6 +54,6 @@ def test_suite():
     suite = unittest.TestSuite()
     for name in [
             'functional'
-            ]:
+    ]:
         suite.addTest(suiteFromPackage(name))
     return suite

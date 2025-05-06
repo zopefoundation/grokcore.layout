@@ -33,7 +33,7 @@ def suiteFromPackage(name):
             continue
         if filename == '__init__.py':
             continue
-        dottedname = 'grokcore.layout.tests.{}.{}'.format(name, filename[:-3])
+        dottedname = f'grokcore.layout.tests.{name}.{filename[:-3]}'
         suite.addTest(make_test(dottedname))
     return suite
 
