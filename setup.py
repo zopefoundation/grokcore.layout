@@ -1,6 +1,5 @@
 import os
 
-from setuptools import find_packages
 from setuptools import setup
 
 
@@ -55,9 +54,6 @@ setup(
     author_email='zope-dev@zope.dev',
     url='https://github.com/zopefoundation/grokcore.layout',
     license='ZPL-2.1',
-    packages=find_packages('src'),
-    package_dir={'': 'src'},
-    namespace_packages=['grokcore'],
     include_package_data=True,
     zip_safe=False,
     python_requires='>=3.9',
