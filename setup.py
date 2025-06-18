@@ -1,6 +1,5 @@
 import os
 
-from setuptools import find_packages
 from setuptools import setup
 
 
@@ -30,7 +29,7 @@ test_requires = [
 
 setup(
     name='grokcore.layout',
-    version='4.2.dev0',
+    version='5.0.dev0',
     description="A layout component package for Grok.",
     long_description=long_description,
     classifiers=[
@@ -55,9 +54,6 @@ setup(
     author_email='zope-dev@zope.dev',
     url='https://github.com/zopefoundation/grokcore.layout',
     license='ZPL-2.1',
-    packages=find_packages('src'),
-    package_dir={'': 'src'},
-    namespace_packages=['grokcore'],
     include_package_data=True,
     zip_safe=False,
     python_requires='>=3.9',
