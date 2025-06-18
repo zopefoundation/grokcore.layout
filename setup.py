@@ -29,7 +29,7 @@ test_requires = [
 
 setup(
     name='grokcore.layout',
-    version='5.0.dev0',
+    version='5.0',
     description="A layout component package for Grok.",
     long_description=long_description,
     classifiers=[
