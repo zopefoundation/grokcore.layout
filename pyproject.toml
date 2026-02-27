@@ -1,14 +1,68 @@
 # Generated with zope.meta (https://zopemeta.readthedocs.io/) from:
 # https://github.com/zopefoundation/meta/tree/master/src/zope/meta/pure-python
-# Generated from:
-# https://github.com/zopefoundation/meta/tree/master/config/pure-python
-
 [build-system]
 requires = [
     "setuptools >= 78.1.1,< 81",
     "wheel",
 ]
 build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "grokcore.layout"
+version = "5.1.dev0"
+description = "A layout component package for Grok."
+license = "ZPL-2.1"
+classifiers = [
+    "Development Status :: 6 - Mature",
+    "Environment :: Web Environment",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: Implementation",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Framework :: Zope :: 3",
+]
+dynamic = ["readme"]
+requires-python = ">=3.10"
+authors = [
+    {name = "Grok Team",email = "zope-dev@zope.dev"},
+]
+maintainers = [
+    {name = "Plone Foundation and contributors",email = "zope-dev@zope.dev"},
+]
+dependencies = [
+    "grokcore.component >= 2.5",
+    "grokcore.security >= 1.6",
+    "grokcore.view >= 3.0.3",
+    "martian >= 0.14",
+    "zope.authentication",
+    "zope.component >= 3.9.1",
+    "zope.errorview",
+    "zope.interface",
+    "zope.publisher",
+]
+keywords = [
+    "grok",
+    "layout",
+    "zope3",
+    "pagelet",
+    "theming",
+]
+
+[project.optional-dependencies]
+test = []
+
+[project.urls]
+Source = "https://github.com/zopefoundation/grokcore.layout"
+Issues = "https://github.com/zopefoundation/grokcore.layout/issues"
+Changelog = "https://raw.githubusercontent.com/zopefoundation/grokcore.layout/master/CHANGES.rst"
 
 [tool.coverage.run]
 branch = true
@@ -32,3 +86,7 @@ exclude_lines = [
 
 [tool.coverage.html]
 directory = "parts/htmlcov"
+
+[tool.setuptools.dynamic]
+readme = {file = ["README.rst", "CHANGES.rst"]}
+
