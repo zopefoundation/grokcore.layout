@@ -1,7 +1,6 @@
 import doctest
+import importlib.resources
 import unittest
-
-from pkg_resources import resource_listdir
 
 import zope.app.wsgi.testlayer
 import zope.testbrowser.wsgi
@@ -19,7 +18,8 @@ layer = Layer(grokcore.layout.tests.functional, allowTearDown=True)
 
 
 def suiteFromPackage(name):
-    files = resource_listdir(__name__, f'{name}')
+    parent = __name__.rsplit('.', 1)[0]
+    files = importlib.resources.files(parent).joinpath(name).iterdir()
     suite = unittest.TestSuite()
     getRootFolder = layer.getRootFolder
     globs = dict(
@@ -31,7 +31,8 @@ def suiteFromPackage(name):
         doctest.REPORT_NDIFF
     )
 
-    for filename in files:
+    for filepath in files:
+        filename = filepath.name
         if filename == '__init__.py':
             continue
 

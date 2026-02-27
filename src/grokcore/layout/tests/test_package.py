@@ -1,7 +1,6 @@
 import doctest
+import importlib.resources
 import unittest
-
-import pkg_resources
 
 from zope.testing import renormalizing
 
@@ -24,9 +23,11 @@ def make_test(dottedname):
 
 
 def suiteFromPackage(name):
-    files = pkg_resources.resource_listdir(__name__, name)
+    parent = __name__.rsplit('.', 1)[0]
+    files = importlib.resources.files(parent).joinpath(name).iterdir()
     suite = unittest.TestSuite()
-    for filename in files:
+    for filepath in files:
+        filename = filepath.name
         if not filename.endswith('.py'):
             continue
         if filename.endswith('_fixture.py'):
