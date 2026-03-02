@@ -10,7 +10,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "grokcore.layout"
-version = "5.1.dev0"
+version = "5.1"
 description = "A layout component package for Grok."
 license = "ZPL-2.1"
 classifiers = [
